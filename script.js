@@ -23,17 +23,12 @@ function getComputerChoice() {
     return computerChoice;
 };
 
-function getHumanChoice() {
-    let humanChoice = prompt('Make you choice!')
-    humanChoice = humanChoice.toLowerCase();
-    // console.log(`getHumanChoice is ${humanChoice}`)
-    return humanChoice;
-};
-
-
-
-
-
+// function getHumanChoice() {
+//     let humanChoice = prompt('Make you choice!')
+//     humanChoice = humanChoice.toLowerCase();
+//     // console.log(`getHumanChoice is ${humanChoice}`)
+//     return humanChoice;
+// };
 
 
 
@@ -44,7 +39,7 @@ function playGame() {
     let computerScore = 0;
     let round = 0;
 
-    let humanSelection = getHumanChoice();
+    // let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
 
     function playRound(humanChoice, computerChoice) {
@@ -69,35 +64,69 @@ function playGame() {
                         humanScore++;
                         console.log('You win! Paper beats Rock!')
                     } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-                        humanScore++;
+                        computerScore++;
                         console.log('You lose! Scissors beats Paper!')
                     } else if (humanChoice === computerChoice) {
                         console.log('That is a draw!')
                     };
                     round++;
+                    console.log(`Round ${round} was played!`)
+                    console.log(`Humanscore is ${humanScore}`)
+                    console.log(`Comoutercore is ${computerScore}`)
+
+                    if(round === 5) {
+                        if (humanScore > computerScore) {
+                            console.log("----YOU win!----")
+                        } if (humanScore === computerScore) {
+                            console.log("----That was a draw :(----")
+                        } else if (humanScore < computerScore) {
+                            console.log("----You lose! Computer WINS!----")
+                        } 
+                    }       
     };
 
-    
-    
-    playRound(humanSelection, computerSelection);
-    humanSelection = getHumanChoice();
-    playRound(humanSelection, computerSelection);
-    humanSelection = getHumanChoice();
-    playRound(humanSelection, computerSelection);
-    humanSelection = getHumanChoice();
-    playRound(humanSelection, computerSelection);
-    humanSelection = getHumanChoice();
-    playRound(humanSelection, computerSelection);
-    
-    if(round === 5) {
-        if (humanScore > computerScore) {
-            console.log("You win!")
-        } if (humanScore === computerScore) {
-            console.log("That was a draw :(")
-        } else {
-            console.log("You lose! Computer WINS!")
-        }
+    // Declare functions for each button
+    function clickedRock() {
+        console.log('Button Rock is clicked!')
+        humanSelection = "rock";
+        playRound(humanSelection, computerSelection);
     }
+    function clickedPaper() {
+        console.log('Button Paper is clicked!')
+        humanSelection = "paper";
+        playRound(humanSelection, computerSelection);
+    }
+    function clickedScissors() {
+        console.log('Button Scissors is clicked!')
+        humanSelection = "scissors";
+        playRound(humanSelection, computerSelection);
+    }
+    // Select buttons
+    const buttonRock = document.getElementById("rock");
+    const buttonPaper = document.getElementById("paper");
+    const buttonScissors = document.getElementById("scissors");
+
+    
+    // Add an event listener for the buttons
+    buttonRock.addEventListener('click', clickedRock);
+    buttonPaper.addEventListener('click', clickedPaper);
+    buttonScissors.addEventListener('click', clickedScissors);
+
+    // playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // playRound(humanSelection, computerSelection);
+    // humanSelection = getHumanChoice();
+    // playRound(humanSelection, computerSelection);
+    
+    
+    
 };
 
+
+
 playGame();
+
