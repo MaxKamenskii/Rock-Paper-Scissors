@@ -22,20 +22,20 @@ body {
 }
 
 #container2 {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 5px;
-    border-color: #FED439FF;
+    border-color: #FED439FF; */
     color: #D5E4A2FF;
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 150px;
+    gap: 50px;
 }
 
 #yourChoiceBox {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 5px;
-    border-color: #FED439FF;
+    border-color: #FED439FF; */
 }
 
 #yourImageBox {
@@ -46,7 +46,6 @@ body {
     height: 200px;
     width: 200px;
     display: flex;
-    flex-direction: column;
 }
 
 #computerImageBox {
@@ -56,14 +55,42 @@ body {
     margin: 10px;
     height: 200px;
     width: 200px;
+    display: flex;
 }
 
 #computerChoiceBox {
-    border-style: solid;
+    /* border-style: solid;
     border-width: 5px;
-    border-color: #FED439FF;
+    border-color: #FED439FF; */
 }
 
 p {
     text-align: center;
+}
+
+#container3 {
+display: flex;
+justify-content: center;
+}
+
+img {
+    width: 150px;
+    margin: auto;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.btn {
+    font-size: 24px;
+}
+
+#handshakePic {
+    display: none;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -11,9 +11,9 @@
     <div id="topDiv">
         <div id="container1">
             <ul>
-                <li>Human Score:</li>
-                <li>Computer Score:</li>
-                <li>Rounds Played:</li>
+                <li>Human Score: <span id="hScore"> 0</span></li>
+                <li>Computer Score: <span id="cScore"> 0</span></li>
+                <li>Rounds Played: <span id="rPlayed"> 0</span></li>
             </ul>
         </div>
     </div>
@@ -22,22 +22,32 @@
         <div id="yourChoiceBox">
             <p>Your Choice: </p>
             <div id="yourImageBox">
-                <p>MY IMAGE HERE</p>
-                <button class="btn" id="rock">Rock</button>
-                <button class="btn" id="paper">Paper</button>
-                <button class="btn" id="scissors">Scissors</button>
+                <img id="rockPic1" src="rock.png" style="display:none">
+                <img id="paperPic1" src="paper.png" style="display:none">
+                <img id="scissorsPic1"  src="scissors.png" style="display:none">
+                <img id="cupPic1" src="cup.png" style="display:none">
             </div>
+        </div>
+        <div id="buttons" style="display:none">
+            <button class="btn" id="rock">Rock 🪨</button>
+                <button class="btn" id="paper">Paper 🧻</button>
+                <button class="btn" id="scissors">Scissors ✂️</button>
+        </div>
+        <div id="handshakePic" style.display = 'none'>
+            <img src="handshake.png">
         </div>
         <div id="computerChoiceBox">
             <p>Computer Choice</p>
             <div id="computerImageBox">
-                <p>COMPUTER IMAGE</p>
+                <img id="rockPic2" src="rock.png" style="display:none">
+                <img id="paperPic2" src="paper.png" style="display:none">
+                <img id="scissorsPic2"  src="scissors.png" style="display:none">
+                <img id="cupPic2" src="cup.png" style="display:none">
             </div>
         </div>
     </div>
-
-
+    <div id="container3">
+        <button class='btn'id="playButton">Play Game</button>
     </div>
-    
 </body>
 </html>
